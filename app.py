@@ -68,7 +68,15 @@ def get_users():
             
     return jsonify({'data': dict_data})
  
-
+@app.route('/question')
+def question():
+    dict_data={}
+    top_skill=request.form.get("skill")
+    if top_skill=="java":
+        dict_data={}
+        dict_data['Q1']={"Question":"Number of primitive data types in Java are?","Option":["6","7","8","9"],"Correct":["8"]}
+        dict_data['Q2']={"Question":"What is the size of float and double in java?","Option":["32 and 32","32 and 64","64 and 64","64 and 32"],"Correct":["32 and 64"]}
+    return(jsonify(dict_data))    
 if __name__ == '__main__':
     app.run(debug=True,port=5000)
 
