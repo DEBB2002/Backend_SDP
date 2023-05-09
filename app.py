@@ -15,7 +15,7 @@ app = Flask(__name__)
 
 
    
-@app.route('/cv')
+@app.route('/cv',methods=['POST'])
 def get_users():
     
     if 'file' not in request.files:
