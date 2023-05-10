@@ -3,7 +3,7 @@ import re
 import spacy
 import pickle
 import urllib.request
-import pickle5 as pickle
+import pickle
 
 
 
