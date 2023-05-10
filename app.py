@@ -61,9 +61,9 @@ def get_users():
     
     for ent in doc.ents:
         if ent.label_.upper() not in dict_data:
-            dict_data[ent.label_.upper()]=[str(ent.text)]
+            dict_data[ent.label_.upper()]=[str(ent.text).lower()]
         else:
-            dict_data[ent.label_.upper()].append(str(ent.text))
+            dict_data[ent.label_.upper()].append(str(ent.text).lower())
     #print(f"{ent.label_.upper():{30}}-{ent.text}")
             
     return jsonify({'data': dict_data})
