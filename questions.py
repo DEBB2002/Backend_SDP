@@ -271,3 +271,214 @@ question_datas={
 
 
 }
+question_fillup={
+"python":[
+    {
+        "question": "In Python, you can use the '___' keyword to define a function.",
+        "answer": "def"
+    },
+    {
+        "question": "A ___ is a sequence of characters surrounded by quotes.",
+        "answer": "string"
+    },
+    {
+        "question": "A ___ is a type of loop that runs a specified number of times.",
+        "answer": "for"
+    },
+    {
+        "question": "___ is the process of finding and fixing errors in a program.",
+        "answer": "debugging"
+    },
+    {
+        "question": "A ___ is a collection of items, where each item has a unique key.",
+        "answer": "dictionary"
+    },
+    {
+        "question": "___ is a built-in function in Python that returns the length of a sequence.",
+        "answer": "len"
+    },
+    {
+        "question": "The ___ statement is used to handle exceptions in Python.",
+        "answer": "try"
+    },
+    {
+        "question": "___ is a way to define a function that takes a variable number of arguments.",
+        "answer": "*args"
+    },
+    {
+        "question": "___ is a way to define a function that takes a variable number of keyword arguments.",
+        "answer": "**kwargs"
+    },
+    {
+        "question": "The ___ module in Python provides access to the operating system's filesystem.",
+        "answer": "os"
+    }
+]
+,"java":[
+    {
+        "question": "Java is a ___-oriented programming language.",
+        "answer": "object"
+    },
+    {
+        "question": "In Java, a ___ is a blueprint or a template for creating objects.",
+        "answer": "class"
+    },
+    {
+        "question": "___ is the process of converting a source code to bytecode in Java.",
+        "answer": "compilation"
+    },
+    {
+        "question": "___ is a mechanism in Java where a subclass can inherit the properties of a superclass.",
+        "answer": "Inheritance"
+    },
+    {
+        "question": "___ is a way to implement multiple inheritance in Java.",
+        "answer": "Interfaces"
+    },
+    {
+        "question": "In Java, the ___ keyword is used to create an instance of a class.",
+        "answer": "new"
+    },
+    {
+        "question": "___ is the process of removing an object from memory in Java.",
+        "answer": "Garbage collection"
+    },
+    {
+        "question": "A ___ in Java is a data structure that stores a collection of elements.",
+        "answer": "Array"
+    },
+    {
+        "question": "___ is a type of loop in Java that runs as long as a certain condition is true.",
+        "answer": "while"
+    },
+    {
+        "question": "In Java, ___ is the process of taking data and formatting it for output.",
+        "answer": "String formatting"
+    }],
+    "ml":[
+    {
+        "question": "___ is a type of supervised learning that deals with predicting a continuous output variable.",
+        "answer": "Regression"
+    },
+    {
+        "question": "___ is a type of unsupervised learning that deals with finding patterns in data.",
+        "answer": "Clustering"
+    },
+    {
+        "question": "___ is a type of reinforcement learning that involves an agent learning through trial and error.",
+        "answer": "Deep learning"
+    },
+    {
+        "question": "___ is the process of splitting a dataset into training and testing subsets.",
+        "answer": "Train-test splitting"
+    },
+    {
+        "question": "___ is a measure of how well a machine learning model can generalize to new data.",
+        "answer": "Accuracy"
+    },
+    {
+        "question": "___ is a technique in machine learning that involves selecting the most relevant features from a dataset.",
+        "answer": "Feature selection"
+    },
+    {
+        "question": "___ is a technique in machine learning that involves transforming input data to make it more suitable for modeling.",
+        "answer": "Feature engineering"
+    },
+    {
+        "question": "___ is a type of neural network that can learn from unstructured data such as images.",
+        "answer": "Convolutional neural network (CNN)"
+    },
+    {
+        "question": "___ is a type of neural network that can learn from sequential data such as time series.",
+        "answer": "Recurrent neural network (RNN)"
+    },
+    {
+        "question": "___ is a popular algorithm used in supervised learning for classification and regression problems.",
+        "answer": "Random forest"
+    }
+]
+,"android":[
+    {
+        "question": "Android is an ___ source operating system for mobile devices developed by Google.",
+        "answer": "open"
+    },
+    {
+        "question": "___ is the language used for writing Android apps.",
+        "answer": "Java"
+    },
+    {
+        "question": "___ is the official integrated development environment (IDE) for Android development.",
+        "answer": "Android Studio"
+    },
+    {
+        "question": "___ is a set of rules that dictate how different components of an Android app interact with each other.",
+        "answer": "Android Application Architecture"
+    },
+    {
+        "question": "A ___ is an individual screen or user interface in an Android app.",
+        "answer": "Activity"
+    },
+    {
+        "question": "___ is a persistent storage solution in Android that allows data to be saved and retrieved.",
+        "answer": "SharedPreferences"
+    },
+    {
+        "question": "___ is a tool in Android Studio that helps developers identify and fix performance issues in their app.",
+        "answer": "Android Profiler"
+    },
+    {
+        "question": "___ is a framework in Android that allows apps to share data and functionality with other apps.",
+        "answer": "Android Intents"
+    },
+    {
+        "question": "___ is a layout manager in Android that arranges views in a grid format.",
+        "answer": "GridLayout"
+    },
+    {
+        "question": "___ is a user interface component in Android that displays a list of items.",
+        "answer": "ListView"
+    }
+]
+,"web":[
+    {
+        "question": "___ stands for Hypertext Markup Language.",
+        "answer": "HTML"
+    },
+    {
+        "question": "___ is a styling language used for styling web pages.",
+        "answer": "CSS"
+    },
+    {
+        "question": "The ___ element is used to define the title of an HTML document.",
+        "answer": "title"
+    },
+    {
+        "question": "___ elements are used to create a navigation menu in HTML.",
+        "answer": "ul/li"
+    },
+    {
+        "question": "___ is a property in CSS that is used to change the background color of an element.",
+        "answer": "background-color"
+    },
+    {
+        "question": "The ___ property in CSS is used to change the font family of an element.",
+        "answer": "font-family"
+    },
+    {
+        "question": "___ is a measurement unit in CSS that is relative to the font size of the element.",
+        "answer": "em"
+    },
+    {
+        "question": "The ___ element in HTML is used to create a hyperlink.",
+        "answer": "a"
+    },
+    {
+        "question": "The ___ property in CSS is used to change the text color of an element.",
+        "answer": "color"
+    },
+    {
+        "question": "The ___ element in HTML is used to define an image.",
+        "answer": "img"
+    }
+]
+}

@@ -70,9 +70,11 @@ def get_users():
 
 
     ques=[]
+    ques_fillup=[]
     if "SKILL" in dict_data:
         l1=list(set(dict_data['SKILL']))
         dict_question=questions.question_datas
+        dict_question_fill=questions.question_fillup
         i=0
         import random
 # generating a random integer between 0 and 9 without using a loop
@@ -108,9 +110,43 @@ def get_users():
                 ques.append(dict_question['ml'][randomNumber])
                 i=i+1  
             if i==10:
-                break      
-    dict_data['ques']=ques
+                break  
+        i=0
+        while i<10:
+            if 'java'in l1:
+                randomNumber = random.randint(0, 9)
+                ques_fillup.append(dict_question_fill['java'][randomNumber])
+                i=i+1
+            if i==10:
+                break
+            if 'python' in l1:
+                randomNumber = random.randint(0, 9)
+                ques_fillup.append(dict_question_fill['python'][randomNumber])
+                i=i+1
+            if i==10:
+                break
+            if 'html' in l1 or 'web' in l1 or 'web app' in l1 :
+                randomNumber = random.randint(0, 9)
+                ques_fillup.append(dict_question_fill['web'][randomNumber])
+                i=i+1
+            if i==10:
+                break
+            if 'ml' in l1 or 'machine learning' in l1 or 'm.l' in l1 :
+                randomNumber = random.randint(0, 9)
+                ques_fillup.append(dict_question_fill['ml'][randomNumber])
+                i=i+1    
+            if i==10:
+                break    
+            if 'ml' in l1 or 'machine learning' in l1 or 'm.l' in l1 :
+                randomNumber = random.randint(0, 9)
+                ques_fillup.append(dict_question_fill['ml'][randomNumber])
+                i=i+1  
+            if i==10:
+                break
 
+
+    dict_data['ques']=ques
+    dict_data['ques_f']=ques_fillup
 
 
                 
@@ -136,7 +172,7 @@ def question():
     return(jsonify(dict_data))    
 
 
-if __name__ == "__main__":
-   app.run(host="0.0.0.0",port=8080)
+if __name__ == '__main__':
+    app.run(debug=True,port=5000)
 
 
