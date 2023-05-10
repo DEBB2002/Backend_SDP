@@ -3,7 +3,8 @@ import re
 import spacy
 import pickle
 import urllib.request
-import pickle
+import pickle5 as pickle
+
 
 
 import PyPDF2
