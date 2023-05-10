@@ -4,8 +4,7 @@ import spacy
 import pickle
 import urllib.request
 import pickle
-
-
+import questions
 
 import PyPDF2
 
@@ -15,7 +14,6 @@ app = Flask(__name__)
 
 
 
-   
 @app.route('/cv',methods=['POST'])
 def get_users():
     
@@ -65,10 +63,68 @@ def get_users():
             dict_data[ent.label_.upper()]=[str(ent.text).lower()]
         else:
             dict_data[ent.label_.upper()].append(str(ent.text).lower())
+        dict_data[ent.label_.upper()]=list(set(dict_data[ent.label_.upper()]))    
     #print(f"{ent.label_.upper():{30}}-{ent.text}")
-            
+    
+
+
+
+    ques=[]
+    if "SKILL" in dict_data:
+        l1=list(set(dict_data['SKILL']))
+        dict_question=questions.question_datas
+        i=0
+        import random
+# generating a random integer between 0 and 9 without using a loop
+
+
+        while i<10:
+            if 'java'in l1:
+                randomNumber = random.randint(0, 9)
+                ques.append(dict_question['java'][randomNumber])
+                i=i+1
+            if i==10:
+                break
+            if 'python' in l1:
+                randomNumber = random.randint(0, 9)
+                ques.append(dict_question['python'][randomNumber])
+                i=i+1
+            if i==10:
+                break
+            if 'html' in l1 or 'web' in l1 or 'web app' in l1 :
+                randomNumber = random.randint(0, 9)
+                ques.append(dict_question['web'][randomNumber])
+                i=i+1
+            if i==10:
+                break
+            if 'ml' in l1 or 'machine learning' in l1 or 'm.l' in l1 :
+                randomNumber = random.randint(0, 9)
+                ques.append(dict_question['ml'][randomNumber])
+                i=i+1    
+            if i==10:
+                break    
+            if 'ml' in l1 or 'machine learning' in l1 or 'm.l' in l1 :
+                randomNumber = random.randint(0, 9)
+                ques.append(dict_question['ml'][randomNumber])
+                i=i+1  
+            if i==10:
+                break      
+    dict_data['ques']=ques
+
+
+
+                
+
+
+
+
+
+
+
+
+
     return jsonify({'data': dict_data})
- 
+
 @app.route('/question')
 def question():
     dict_data={}
@@ -78,6 +134,8 @@ def question():
         dict_data['Q1']={"Question":"Number of primitive data types in Java are?","Option":["6","7","8","9"],"Correct":["8"]}
         dict_data['Q2']={"Question":"What is the size of float and double in java?","Option":["32 and 32","32 and 64","64 and 64","64 and 32"],"Correct":["32 and 64"]}
     return(jsonify(dict_data))    
+
+
 if __name__ == '__main__':
     app.run(debug=True,port=5000)
 
